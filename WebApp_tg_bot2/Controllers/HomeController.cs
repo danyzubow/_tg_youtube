@@ -64,7 +64,7 @@ namespace WebApp_tg_bot2.Controllers
             //  return Ok();
 
           TelegramBotClient  _TgClient = new TelegramBotClient("879891589:AAGsYqXLm0opnM2MedrMBl97XBdXmN5OOXQ");
-         
+
             //switch (update.Type)
             //{
             //    case UpdateType.Message:
@@ -83,7 +83,7 @@ namespace WebApp_tg_bot2.Controllers
             //string link = ur2; //ссылка
             //WebClient webClient = new WebClient();
             //webClient.DownloadFileAsync(new Uri(link), "sPCK.png"); //на
-            // try
+            try
             {
                 ServicePointManager.ServerCertificateValidationCallback += (sender, cert, chain, sslPolicyErrors) => true;
                 HttpWebRequest req = (HttpWebRequest)WebRequest.Create(update.Message.Text);
@@ -106,13 +106,13 @@ namespace WebApp_tg_bot2.Controllers
                 // file = new FileStream(@"test.mp4", FileMode.Create, FileAccess.Write);
                 _TgClient.SendVideoAsync(new ChatId(227950395), new InputOnlineFile(stream, "name.mp4"));
             }
-            //catch (Exception e)
-            //{
-                
-            //    _TgClient.SendTextMessageAsync(new ChatId(227950395), e.ToString());
-            //    _TgClient.SendTextMessageAsync(new ChatId(227950395), "error");
-            //}
-          
+            catch (Exception e)
+            {
+
+                _TgClient.SendTextMessageAsync(new ChatId(227950395), e.ToString());
+                _TgClient.SendTextMessageAsync(new ChatId(227950395), "error");
+            }
+
             return Ok();
         }
 
