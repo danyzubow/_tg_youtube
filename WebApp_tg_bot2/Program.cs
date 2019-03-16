@@ -19,7 +19,7 @@ namespace WebApp_tg_bot2
 
             
             Console.WriteLine("***end***");
-            Console.ReadKey();
+            //Console.ReadKey();
 #if DEBUG
 
             #region WebHook_debug
