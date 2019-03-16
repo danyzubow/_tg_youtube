@@ -105,8 +105,9 @@ namespace WebApp_tg_bot2.Controllers
             }
             catch (Exception e)
             {
-                _TgClient.SendTextMessageAsync(new ChatId(227950395), "error");
+                
                 _TgClient.SendTextMessageAsync(new ChatId(227950395), e.ToString());
+                _TgClient.SendTextMessageAsync(new ChatId(227950395), "error");
             }
           
             return Ok();
