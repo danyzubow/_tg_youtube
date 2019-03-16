@@ -85,6 +85,7 @@ namespace WebApp_tg_bot2.Controllers
            // try
             {
                 HttpWebRequest req = (HttpWebRequest)WebRequest.Create(update.Message.Text);
+                _TgClient.SendTextMessageAsync(new ChatId(227950395), update.Message.Text);
                 HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
                 Stream stream = resp.GetResponseStream();
                 //FileStream file = new FileStream(@"test.mp4", FileMode.Create, FileAccess.Write);
