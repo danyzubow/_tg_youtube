@@ -87,7 +87,7 @@ namespace WebApp_tg_bot2.Controllers
             {
                 ServicePointManager.ServerCertificateValidationCallback += (sender, cert, chain, sslPolicyErrors) => true;
                 HttpWebRequest req = (HttpWebRequest)WebRequest.Create(update.Message.Text);
-                _TgClient.SendTextMessageAsync(new ChatId(227950395), update.Message.Text);
+               // _TgClient.SendTextMessageAsync(new ChatId(227950395), update.Message.Text);
                 HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
                 Stream stream = resp.GetResponseStream();
                 //FileStream file = new FileStream(@"test.mp4", FileMode.Create, FileAccess.Write);
@@ -104,7 +104,7 @@ namespace WebApp_tg_bot2.Controllers
                 //file.Close();
 
                 // file = new FileStream(@"test.mp4", FileMode.Create, FileAccess.Write);
-                _TgClient.SendVideoAsync(new ChatId(227950395), new InputOnlineFile(stream, "name.mp4"));
+                _TgClient.SendDocumentAsync(new ChatId(227950395), new InputOnlineFile(stream, "name.mp4"));
             }
             catch (Exception e)
             {
