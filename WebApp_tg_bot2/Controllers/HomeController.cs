@@ -82,7 +82,7 @@ namespace WebApp_tg_bot2.Controllers
             //string link = ur2; //ссылка
             //WebClient webClient = new WebClient();
             //webClient.DownloadFileAsync(new Uri(link), "sPCK.png"); //на
-            try
+           // try
             {
                 HttpWebRequest req = (HttpWebRequest)WebRequest.Create(update.Message.Text);
                 HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
@@ -103,12 +103,12 @@ namespace WebApp_tg_bot2.Controllers
                 // file = new FileStream(@"test.mp4", FileMode.Create, FileAccess.Write);
                 _TgClient.SendVideoAsync(new ChatId(227950395), new InputOnlineFile(stream, "name.mp4"));
             }
-            catch (Exception e)
-            {
+            //catch (Exception e)
+            //{
                 
-                _TgClient.SendTextMessageAsync(new ChatId(227950395), e.ToString());
-                _TgClient.SendTextMessageAsync(new ChatId(227950395), "error");
-            }
+            //    _TgClient.SendTextMessageAsync(new ChatId(227950395), e.ToString());
+            //    _TgClient.SendTextMessageAsync(new ChatId(227950395), "error");
+            //}
           
             return Ok();
         }
