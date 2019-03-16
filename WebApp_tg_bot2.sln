@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp_tg_bot2", "WebApp_tg_bot2\WebApp_tg_bot2.csproj", "{DECA83F5-B6DB-4888-ACF4-CA9B4A473AB3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DECA83F5-B6DB-4888-ACF4-CA9B4A473AB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DECA83F5-B6DB-4888-ACF4-CA9B4A473AB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DECA83F5-B6DB-4888-ACF4-CA9B4A473AB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DECA83F5-B6DB-4888-ACF4-CA9B4A473AB3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30B00E9F-8C05-4EB8-B8A6-9028420A1AE6}
+	EndGlobalSection
+EndGlobal
