@@ -38,7 +38,7 @@ namespace WebApp_tg_bot2
             #endregion
 
 #else
-            url_Web_Hook = "https://tgyou.herokuapp.com//home/update";
+            url_Web_Hook = "https://tgyou.herokuapp.com/home/update";
             Token = "879891589:AAGsYqXLm0opnM2MedrMBl97XBdXmN5OOXQ";
             PorterOfChat.Porter.SetWebhook(Token,url_Web_Hook);
 #endif
