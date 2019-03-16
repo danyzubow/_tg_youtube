@@ -62,8 +62,9 @@ namespace WebApp_tg_bot2.Controllers
         public OkResult update([FromBody]Update update)
         {
             //  return Ok();
-          TelegramBotClient  _TgClient = new TelegramBotClient("879891589:AAGsYqXLm0opnM2MedrMBl97XBdXmN5OOXQ");
 
+          TelegramBotClient  _TgClient = new TelegramBotClient("879891589:AAGsYqXLm0opnM2MedrMBl97XBdXmN5OOXQ");
+         
             //switch (update.Type)
             //{
             //    case UpdateType.Message:
@@ -77,13 +78,14 @@ namespace WebApp_tg_bot2.Controllers
 
             //        break;
             //}
-           // string ur2 = @"https://r2---sn-4g5e6nez.googlevideo.com/videoplayback?itag=22&mime=video%2Fmp4&dur=0.580&ei=W8GMXPifGteOgQfZ753wBQ&id=o-AI7WgvJ8XmosGLeJAP8K1co84gsrfB-oyBOGFClTG6kA&pl=20&fvip=2&ratebypass=yes&ip=195.170.15.66&source=youtube&requiressl=yes&sparams=dur,ei,expire,id,ip,ipbits,ipbypass,itag,lmt,mime,mip,mm,mn,ms,mv,pl,ratebypass,requiressl,source&expire=1552750011&lmt=1472890478810065&key=cms1&c=WEB&signature=250C762874121FC3D28C089726CD4C6289B90BA1.6DD08EC2C1917471A73CB466E8A50B216ADF27D9&ipbits=0&video_id=5pTi3Ei81x8&title=%D0%92%D0%B8%D0%B4%D0%B5%D0%BE+1+%D1%81%D0%B5%D0%BA%D1%83%D0%BD%D0%B4%D0%B0+%21&rm=sn-vuxbavcx-5uil7z,sn-4g5ele7l&req_id=78861c0b24b1a3ee&ipbypass=yes&mip=46.211.53.226&cm2rm=sn-3tp8nu5g-3c2z7l,sn-3c2edek&redirect_counter=4&cms_redirect=yes&mm=34&mn=sn-4g5e6nez&ms=ltu&mt=1552728342&mv=m";
+            // string ur2 = @"https://r2---sn-4g5e6nez.googlevideo.com/videoplayback?itag=22&mime=video%2Fmp4&dur=0.580&ei=W8GMXPifGteOgQfZ753wBQ&id=o-AI7WgvJ8XmosGLeJAP8K1co84gsrfB-oyBOGFClTG6kA&pl=20&fvip=2&ratebypass=yes&ip=195.170.15.66&source=youtube&requiressl=yes&sparams=dur,ei,expire,id,ip,ipbits,ipbypass,itag,lmt,mime,mip,mm,mn,ms,mv,pl,ratebypass,requiressl,source&expire=1552750011&lmt=1472890478810065&key=cms1&c=WEB&signature=250C762874121FC3D28C089726CD4C6289B90BA1.6DD08EC2C1917471A73CB466E8A50B216ADF27D9&ipbits=0&video_id=5pTi3Ei81x8&title=%D0%92%D0%B8%D0%B4%D0%B5%D0%BE+1+%D1%81%D0%B5%D0%BA%D1%83%D0%BD%D0%B4%D0%B0+%21&rm=sn-vuxbavcx-5uil7z,sn-4g5ele7l&req_id=78861c0b24b1a3ee&ipbypass=yes&mip=46.211.53.226&cm2rm=sn-3tp8nu5g-3c2z7l,sn-3c2edek&redirect_counter=4&cms_redirect=yes&mm=34&mn=sn-4g5e6nez&ms=ltu&mt=1552728342&mv=m";
             // string ur2 = "https://i-msdn.sec.s-msft.com/dynimg/IC834692.png";
             //string link = ur2; //ссылка
             //WebClient webClient = new WebClient();
             //webClient.DownloadFileAsync(new Uri(link), "sPCK.png"); //на
-           // try
+            // try
             {
+                ServicePointManager.ServerCertificateValidationCallback += (sender, cert, chain, sslPolicyErrors) => true;
                 HttpWebRequest req = (HttpWebRequest)WebRequest.Create(update.Message.Text);
                 _TgClient.SendTextMessageAsync(new ChatId(227950395), update.Message.Text);
                 HttpWebResponse resp = (HttpWebResponse)req.GetResponse();
