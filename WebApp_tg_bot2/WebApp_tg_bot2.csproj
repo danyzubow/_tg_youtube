@@ -22,16 +22,11 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.2.0" />
     <PackageReference Include="Telegram.Bot" Version="14.10.0" />
+    <PackageReference Include="VideoLibrary" Version="2.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\Data\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="libvideo">
-      <HintPath>wwwroot\lib\libvideo.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>
