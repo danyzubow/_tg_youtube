@@ -64,8 +64,8 @@ namespace WebApp_tg_bot2.Controllers
             TelegramBotClient _TgClient = new TelegramBotClient("879891589:AAGsYqXLm0opnM2MedrMBl97XBdXmN5OOXQ");
 
 
-            try
-            {
+            //try
+            //{
                 string id = update.Message.Text;
 
                 using (var service = Client.For(YouTube.Default))
@@ -100,12 +100,12 @@ namespace WebApp_tg_bot2.Controllers
                 }
 
             }
-            catch (Exception e)
-            {
+            //catch (Exception e)
+            //{
 
-                _TgClient.SendTextMessageAsync(new ChatId(227950395), e.ToString());
-                _TgClient.SendTextMessageAsync(new ChatId(227950395), "error");
-            }
+            //    _TgClient.SendTextMessageAsync(new ChatId(227950395), e.ToString());
+            //    _TgClient.SendTextMessageAsync(new ChatId(227950395), "error");
+            //}
 
             return Ok();
         }
