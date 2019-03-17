@@ -28,4 +28,10 @@
     <Folder Include="wwwroot\Data\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="libvideo">
+      <HintPath>wwwroot\lib\libvideo.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

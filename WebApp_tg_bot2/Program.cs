@@ -25,7 +25,7 @@ namespace WebApp_tg_bot2
             #region WebHook_debug
 
             Token = "879891589:AAGsYqXLm0opnM2MedrMBl97XBdXmN5OOXQ"; //debug token
-            url_Web_Hook = "https://8567534b.ngrok.io/home/update";
+            url_Web_Hook = "https://efdb433d.ngrok.io/home/update";
             PorterOfChat.Porter.SetWebhook(Token, url_Web_Hook);
             #endregion
 
